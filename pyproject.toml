@@ -1,7 +1,19 @@
 [project]
-name = "xcat"
+name = "xcat-llm"
 version = "0.1.0"
-description = "Add your description here"
+description = "Concatenate source trees into clean, structured, LLM-ready text context."
 readme = "README.md"
-requires-python = ">=3.14"
-dependencies = []
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic-settings>=2.14.1",
+]
+
+[project.scripts]
+xcat = "xcat.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
