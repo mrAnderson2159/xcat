@@ -1,12 +1,36 @@
 [project]
 name = "xcat-llm"
 version = "0.1.0"
-description = "Concatenate source trees into clean, structured, LLM-ready text context."
+description = "Build clean, structured LLM context files from your codebase."
 readme = "README.md"
 requires-python = ">=3.12"
+license = "MIT"
+authors = [
+    { name = "Valerio Molinari", email = "valeriomolinariprogrammazione@gmail.com" }
+]
 dependencies = [
     "pydantic-settings>=2.14.1",
 ]
+
+keywords = ["llm", "context", "cli", "developer-tools", "code"]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/mrAnderson2159/xcat"
+Repository = "https://github.com/mrAnderson2159/xcat"
+Issues = "https://github.com/mrAnderson2159/xcat/issues"
 
 [project.scripts]
 xcat = "xcat.__main__:main"
