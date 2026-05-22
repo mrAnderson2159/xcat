@@ -13,14 +13,21 @@ The CLI may expose these presets as flags such as ``--python`` or
 """
 
 BASE = {
-    # Git / environments
+    # Version control
     ".git",
+    ".hg",
+    ".svn",
+    # Environment / secrets
+    ".env",
+    ".env.local",
+    ".env.development",
+    ".env.production",
+    ".env.test",
+    ".env.*.local",
+    # Virtual environments / dependency environments
     ".venv",
-    # Python cache/build
-    "__pycache__",
-    "*.pyc",
-    "*.pyo",
-    "*.egg-info",
+    "venv",
+    "env",
     # Editors / IDEs
     ".idea",
     ".vscode",
@@ -37,9 +44,16 @@ BASE = {
 }
 
 PYTHON = BASE | {
+    # Python cache/build
+    "__pycache__",
+    "*.pyc",
+    "*.pyo",
+    "*.egg-info",
+    # Tool caches
     ".pytest_cache",
     ".mypy_cache",
     ".ruff_cache",
+    # Build / coverage outputs
     "dist",
     "build",
     "htmlcov",

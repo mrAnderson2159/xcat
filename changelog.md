@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2] - 2026-05-22
+
+### Fixed
+
+- Ignore common environment files by default to avoid leaking secrets into generated context.
+- Move Python-specific cache patterns from the base preset to the Python preset.
+
 ## [0.1.1] - 2026-05-22
 
 ### Fixed
