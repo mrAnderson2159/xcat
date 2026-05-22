@@ -9,11 +9,6 @@ class Settings(BaseSettings):
     LOGGING_LEVEL: str = "INFO"
     """Logging level for the application."""
 
-    model_config = {
-        "env_file": ".env",
-        "case_sensitive": True,
-    }
-
 
 settings = Settings()  # type: ignore[call-arg]
 """Instance of the `Settings` class that loads the configuration from environment variables.
